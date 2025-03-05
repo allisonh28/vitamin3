@@ -40,7 +40,7 @@ const question2 = () => {
   /** YOUR CODE HERE */
   const input = taskName.value;
   addTodoButton.addEventListener('click', function() {
-    if (input.trim() !== '') {
+    if (input.trim !== '') {
       const newTask = document.createElement('li');
       newTask.textContent = input;
       todoListUl.appendChild(newTask);
@@ -56,9 +56,9 @@ const question2 = () => {
  * Question 3
  */
 const question3 = () => {
-  const firstNameInput = __YOUR_CODE_HERE__;
-  const lastNameInput = __YOUR_CODE_HERE__;
-  const message = __YOUR_CODE_HERE__;
+  const firstNameInput = document.getElementById('first-name');
+  const lastNameInput = document.getElementById('last-name');
+  const message = document.getElementById('message');
 
   // using this function is reccomended but not necessary
   const updateMessage = () => {
