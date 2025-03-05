@@ -38,9 +38,9 @@ const question2 = () => {
   const todoListUl = document.getElementById('todo-list');
 
   /** YOUR CODE HERE */
-  const input = taskName.value;
   addTodoButton.addEventListener('click', function() {
-    if (input.trim !== '') {
+    const input = taskName.value;
+    if (input.trim() !== '') {
       const newTask = document.createElement('li');
       newTask.textContent = input;
       todoListUl.appendChild(newTask);
@@ -63,11 +63,19 @@ const question3 = () => {
   // using this function is reccomended but not necessary
   const updateMessage = () => {
     /** YOUR CODE HERE */
-
+    message.textContent = `Hello ${firstNameInput.value} ${lastNameInput.value}!`;
+    if (lastNameInput.value === "" && firstNameInput.value === "") {
+      message.textContent = "Type your name to see a message!";
+    }
   };
 
   /** YOUR CODE HERE */
-
+firstNameInput.addEventListener('keyup', function() {
+  updateMessage();
+})
+lastNameInput.addEventListener('keyup', function() {
+  updateMessage();
+})
 };
 
 /**
