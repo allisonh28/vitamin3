@@ -2,8 +2,8 @@
  * Question 1
  */
 const question1 = () => {
-  const sidebarButton = getElementById('sidebar-button');
-  const sidebar = getElementById('sidebar');
+  const sidebarButton = document.getElementById('sidebar-button');
+  const sidebar = document.getElementById('sidebar');
 
   // Listen for a "click" event on the sidebar's button.
   //
@@ -14,8 +14,8 @@ const question1 = () => {
   // addEventListener will then call the function we provide
   // whenever the button is clicked.
   sidebarButton.addEventListener('click', function() {
-    sidebar.classList.toggle('aside.opened');
-    const sidebarIsOpen = sidebar.classList.contains('aside.opened');
+    sidebar.classList.toggle('opened');
+    const sidebarIsOpen = sidebar.classList.contains('opened');
 
     if (sidebarIsOpen) {
       // Close the sidebar
